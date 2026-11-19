@@ -1,0 +1,315 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  background: #5268d9;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.container {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5px;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+header h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+header p {
+  color: #777;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+header .logout {
+  padding: 12px 22px;
+  white-space: nowrap;
+}
+
+h1 {
+  color: #3549a5;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #777;
+}
+
+.logout {
+  background: #555;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-card, .panel, .login-card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0000000d;
+}
+
+.stat-card h2 {
+  color: #5268d9;
+  margin: 0;
+  font-size: 30px;
+}
+
+.stat-card p {
+  color: #777;
+  margin-bottom: 0;
+}
+
+.panel {
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #222222;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 11px;
+  margin: 7px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #333333;
+  font-size: 15px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #5268d9;
+}
+
+textarea {
+  min-height: 75px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.project-form {
+  display: flex;
+  gap: 10px;
+}
+
+.project-form input {
+  flex: 1;
+}
+
+.project-form button {
+  white-space: nowrap;
+  height: 43px;
+  margin-top: 7px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cancel {
+  background: #777;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-info h3 {
+  margin: 0 0 8px;
+}
+
+.task-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+.task-info small {
+  color: #777;
+}
+
+.completed, .pending {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.completed {
+  background: #d9f5e3;
+  color: #237744;
+}
+
+.pending {
+  background: #fff0d1;
+  color: #986500;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.task-actions button {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+.edit {
+  background: #777;
+}
+
+.delete {
+  background: #d9534f;
+}
+
+.search {
+  margin-bottom: 15px;
+}
+
+.message {
+  background: #e8edff;
+  color: #3549a5;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px;
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 27px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.login-card > p {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-card button[type="submit"] {
+  width: 100%;
+}
+
+.switch {
+  text-align: center;
+  font-size: 14px;
+}
+
+.link {
+  background: none;
+  color: #5268d9;
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px auto;
+    padding: 12px;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 13px;
+  }
+
+  .stat-card h2 {
+    font-size: 24px;
+  }
+
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    width: 100%;
+  }
+
+  .project-form {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  header {
+    gap: 10px;
+  }
+}
